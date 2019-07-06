@@ -1,0 +1,30 @@
+1. create a db in mongo shell:
+use channel_database
+
+2. Insert data in channels database;
+db.channels.insert([
+   {
+      title: 'MongoDB Overview', 
+      description: 'MongoDB is no sql database',
+      by: 'tutorials point',
+      url: 'http://www.tutorialspoint.com',
+      tags: ['mongodb', 'database', 'NoSQL'],
+      channel : "tutorial point"
+   },
+	
+   {
+      title: 'NoSQL Database', 
+      description: "NoSQL database doesn't have tables",
+      by: 'software developer',
+      tags: ['mongodb', 'database', 'NoSQL'],
+      channel: "software developer", 
+      comments: [	
+         {
+            user:'user1',
+            message: 'My first comment',
+            dateCreated: new Date(2018,11,10,2,35),
+            like: 0 
+         }
+      ]
+   }
+])
